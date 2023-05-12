@@ -8,8 +8,7 @@ resource "aws_instance" "ec2" {
   ami                    = data.aws_ami.ami.image_id
   instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.sg.id]
-
-  tags = {
+   tags = {
     Name = var.component
   }
 }
@@ -24,7 +23,7 @@ resource "null_resource" "provisioner" {
     }
 
     inline = [
-    "git clone https://github.com/shanmukhatadisetti/roboshop-shell.git",
+    "git clone https://github.com/shanmukhatadisetti/roboshop-shell",
     "cd roboshop-shell",
     "sudo bash ${var.component}.sh ${var.password}"
     ]
@@ -62,6 +61,7 @@ resource "aws_route53_record" "record" {
   ttl     = 30
   records = [aws_instance.ec2.private_ip]
 }
+
 variable "component" {}
 variable "instance_type" {}
 variable "env" {
