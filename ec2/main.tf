@@ -57,7 +57,7 @@ resource "aws_security_group" "sg" {
 
 resource "aws_route53_record" "record" {
   zone_id = "Z06091892F87AU9X9DS8J"
-  name    = "dev.autonagar.in"
+  name    = "${var.component}dev.autonagar.in"
   type    = "A"
   ttl     = 30
   records = [aws_instance.ec2.private_ip]
