@@ -4,9 +4,9 @@ terraform {
 
 resource "aws_ssm_parameter" "parameters" {
   count = length(var.parameters)
-  name  = var.parametes[count.index].name
-  type  = var.parametes[count.index].type
-  value = var.parametes[count.index].value
+  name  = var.parameters[count.index].name
+  type  = var.parameters[count.index].type
+  value = var.parameters[count.index].value
 }
 
 variable "parameters"{}
