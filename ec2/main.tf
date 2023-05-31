@@ -56,9 +56,9 @@ resource "aws_route53_record" "record" {
 }
 
 resource "aws_iam_policy" "ssm-policy" {
-  name        = "${var.env}.${var.component}-ssm"
+  name        = "${var.env}-${var.component}-ssm"
   path        = "/"
-  description = "${var.env}.${var.component}-ssm"
+  description = "${var.env}-${var.component}-ssm"
   policy = jsonencode({
     "Version": "2012-10-17",
     "Statement": [
