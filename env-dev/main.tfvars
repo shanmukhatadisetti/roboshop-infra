@@ -27,6 +27,10 @@ instances = {
     name = "mysql"
     type = "t3.micro"
   }
+  shipping = {
+    name = "shipping"
+    type = "t3.micro"
+  }
   rabbitmq = {
     name = "rabbitmq"
     type = "t3.micro"
@@ -35,10 +39,7 @@ instances = {
     name = "payment"
     type = "t3.micro"
   }
-  shipping = {
-    name = "shipping"
-    type = "t3.micro"
-  }
+
 }
 
 env = "dev"
