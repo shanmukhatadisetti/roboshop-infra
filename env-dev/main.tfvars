@@ -35,6 +35,10 @@ instances = {
     name = "payment"
     type = "t3.micro"
   }
+  shipping = {
+    name = "shipping"
+    type = "t3.micro"
+  }
 }
 
 env = "dev"
