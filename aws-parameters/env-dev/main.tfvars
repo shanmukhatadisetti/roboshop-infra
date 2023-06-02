@@ -7,7 +7,7 @@ parameters = [
   { name= "dev.user.mongo", value = "true", type= "String" },
   { name= "dev.user.redis_host", value = "redis-dev.autonagar.in", type= "String" },
   { name= "dev.user.mongo_url", value = "mongodb://mongodb-dev.autonagar.in:27017/users", type= "String" },
-  { name= "dev.shipping.cart_endpoint", value = "cart-dev.autonagar.in", type= "String" },
+  { name= "dev.shipping.cart_endpoint", value = "cart-dev.autonagar.in:8080", type= "String" },
   { name= "dev.shipping.db_host", value = "mysql-dev.autonagar.in", type= "String" },
   { name= "dev.payment.cart_host", value = "cart-dev.autonagar.in", type= "String" },
   { name= "dev.payment.cart_port", value = "8080", type= "String" },
