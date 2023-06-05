@@ -19,11 +19,14 @@ parameters = [
   { name= "dev.cart.redis_host", value = "redis-dev.autonagar.in", type= "String" },
   { name= "dev.cart.catalogue_host", value = "catalogue-dev.autonagar.in", type= "String" },
   { name= "dev.cart.catalogue_port", value = "8080", type= "String" }
-  
-
 ]
 
-
+### THIS IS NOT DOING TO BE THE PRACTICE IN COMPANIES, WE SHOULD NOT KEEP PASSWORDS IN GIT REPOS
+secrets = [
+  { name= "dev.payment.amqp_user", value = "roboshop", type= "SecureString" },
+  { name= "dev.payment.amqp_pass", value = "roboshop123", type= "SecureString" },
+  { name= "dev.mysql.password", value = "RoboShop@1", type= "SecureString" }
+]
 
 
 
