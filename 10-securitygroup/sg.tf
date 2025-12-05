@@ -4,7 +4,7 @@ module "frontend-sg" {
     description = var.description
     project = var.project
     env = var.env
-    vpc_id = data.aws_ssm_parameter.vpc_id.id.value
+    vpc_id = data.aws_ssm_parameter.vpc_id.value
 
 
   
