@@ -4,7 +4,7 @@ variable "project" {
 }
 
 variable "env" {
-    default = "env"
+    default = "dev"
   
 }
 
