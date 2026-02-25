@@ -20,7 +20,7 @@ pipeline{
     } */
 
     stages{
-        stage(Init Stage) {
+        stage('Init Stage') {
             steps {
                 script {
                     withAWS(credentials: 'aws-creds', region: 'us-east-1') {
